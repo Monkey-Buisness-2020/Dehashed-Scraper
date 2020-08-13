@@ -5,8 +5,8 @@ I have stated in the script where to put your information:
 <pre><code>
 class Dehashed_Scraper():
     # Authentication is email + API. BASIC Auth | Enter you Email and Dehashed API below
-    de_EMAIL = ''
-    API_KEY = ''
+    <strong>de_EMAIL = ''</strong>
+    <strong>API_KEY = ''</strong>
 
     # Leave the below alone
     domain = ''
