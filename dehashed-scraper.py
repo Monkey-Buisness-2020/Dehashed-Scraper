@@ -6,7 +6,7 @@ import time
 class Dehashed_Scraper():
     # Authentication is email + API. BASIC Auth | Enter you Email and Dehashed API below
     dehashed_EMAIL = ''
-    API_KEY = ''
+    api_key = ''
 
     # Leave the below alone
     domain = ''
@@ -19,7 +19,7 @@ class Dehashed_Scraper():
             url = f'https://api.dehashed.com/search?query=domain%3A{query}'
             print(f'\nSearching for {query}')
             print("\nGrabbing Leaks...")
-            response = requests.get(url, headers=self.headers, auth=(self.dehashed_EMAIL, self.API_KEY))
+            response = requests.get(url, headers=self.headers, auth=(self.dehashed_EMAIL, self.api_key))
             data = json.loads(response.content)
             return data
         except:
@@ -67,7 +67,7 @@ class Dehashed_Scraper():
 
     # Run program
     def run(self):
-        if self.API_KEY and self.dehashed_EMAIL:
+        if self.api_key and self.dehashed_EMAIL:
             search_term = input("\nWhat's the Domain name? (example.com): ")
             t1 = time.perf_counter()
             data = self.fetch_data(search_term)
