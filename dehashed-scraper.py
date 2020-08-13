@@ -1,13 +1,11 @@
 import requests
 import json
 import csv
-import datetime, time
-from bs4 import BeautifulSoup
-from requests.auth import HTTPBasicAuth
+import time
 
 class Dehashed_Scraper():
     # Authentication is email + API. BASIC Auth | Enter you Email and Dehashed API below
-    de_EMAIL = ''
+    dehashed_EMAIL = ''
     API_KEY = ''
 
     # Leave the below alone
@@ -21,7 +19,7 @@ class Dehashed_Scraper():
             url = f'https://api.dehashed.com/search?query=domain%3A{query}'
             print(f'\nSearching for {query}')
             print("\nGrabbing Leaks...")
-            response = requests.get(url, headers=self.headers, auth=HTTPBasicAuth(self.de_EMAIL, self.API_KEY))
+            response = requests.get(url, headers=self.headers, auth=(self.dehashed_EMAIL, self.API_KEY))
             data = json.loads(response.content)
             return data
         except:
@@ -69,7 +67,7 @@ class Dehashed_Scraper():
 
     # Run program
     def run(self):
-        if self.API_KEY and self.de_EMAIL:
+        if self.API_KEY and self.dehashed_EMAIL:
             search_term = input("\nWhat's the Domain name? (example.com): ")
             t1 = time.perf_counter()
             data = self.fetch_data(search_term)
