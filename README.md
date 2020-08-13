@@ -1,6 +1,6 @@
 # Dehashed-Scraper
-This is a tool I created to scrape breached info from the Dehashed site. 
-You will need a <strong>API key</strong> and a <strong>valid subscription</strong> to use this tool, both you will have to enter before running.
+This is a tool I created to scrape breached info from the Dehashed site.<br>
+You will need a <strong>API key</strong> and a <strong>valid subscription</strong> to use this tool, both you will have to enter before running.<br>
 I have stated in the script where to put your information:
 <pre><code>
 class Dehashed_Scraper():
