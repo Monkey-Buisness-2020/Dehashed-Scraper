@@ -18,3 +18,5 @@ Git cloning the repo
 <pre><code>git clone https://github.com/Norseman2018/Dehashed-Scraper.git"</code></pre>
 Run the script
 <pre><code>python dehashed_scraper.py</code></pre>
+
+![Tool Running](Images/i1.jpg)
